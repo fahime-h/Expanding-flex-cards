@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #faebd7;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.container .item:first-child {
+    background-image: url(./image/spring.jpeg);
+    background-size: cover;
+}
+
+.container div:nth-child(2) {
+    background-image: url(./image/summer.jpeg);
+    background-size: cover;
+}
+
+.container div:nth-child(3) {
+    background-image: url(./image/autunm.jpeg);
+    background-size: cover;
+}
+
+.container div:nth-child(4) {
+    background-image: url(./image/winter.jpeg);
+    background-size: cover;
+}
+
+.item {
+    width: 100px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background: transparent;
+    background-color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.active {
+    width: 300px;
+    height: 500px;
+}
+
+.title {
+    width: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    border-radius: 0 0 20px 20px;
+    padding: 15px 0;
+}
+
+.open {
+    animation: open 1.5s linear;
+}
+
+.close {
+    animation: close 1.5s linear;
+}
+
+@keyframes open {
+    from {width: 100px;}
+    to {width: 300px;}
+}
+
+@keyframes close {
+    from {width: 300px;}
+    to {width: 100px;}
+}
+
